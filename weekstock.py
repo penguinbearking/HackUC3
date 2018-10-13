@@ -1,11 +1,13 @@
-from iexfinance import get_historical_data
+from iexfinance import *
 from datetime import *
 import matplotlib.pyplot as plt
 import requests
 import pandas
 import json
 
+
 stock = input("Enter your ticker symbol: " )
+
 
 today = date.today()
 lastweek = date.today() - timedelta(8)
@@ -17,9 +19,17 @@ start = lastweek
 
 end = today
 
-f = get_historical_data(stock, start, end, output_format='pandas')
+data = get_historical_data(stock, start, end, output_format='pandas')
 
-plt.plot(f["close"])
+i = 0
+for i in range(len(data)):
+    j = (date.today() - timedelta(i)).weekday()
+    if j == 5 or j == 6:
+        data pop(i)
+        print ("weekend")
+        i +=1
+
+plt.plot(data["close"])
 
 plt.title('Time series chart for ' + (stock))
 
