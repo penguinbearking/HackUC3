@@ -5,9 +5,14 @@ import requests
 import pandas
 import json
 
-stock.upper() = input("Enter your desired ticker symbol: ")
-stock = Stock((stock), output_format='pandas')
-stock.get_quote().head()
-stock.change_output_format('json')
-quote = input("Input your quote: (avgTotalVolume, calculationPrice, change, changePercent, or close)")
-stock.get_quote()[quote]
+start = datetime(2017, 2, 9)
+
+end = datetime(2017, 5, 24)
+
+f = get_historical_data("AAPL", start, end, output_format='pandas')
+
+plt.plot(f["close"])
+
+plt.title('Time series chart for AAPL')
+
+plt.show()
