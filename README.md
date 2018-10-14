@@ -1,4 +1,4 @@
-# HackUC3
+# Stock Predictions Based on Historical Data
 
 <em>This code was created for the HackUC III on October 13, 2018.</em>
 
