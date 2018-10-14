@@ -36,9 +36,9 @@ while True:
     end = today
 
     data = get_historical_data(stock, datetime(2015, 1, 1), end, output_format='pandas')
-    print(data)
-    a = type(data)
-    print(a)
+    #print(data)
+    #a = type(data)
+    #print(a)
 
     data = data.values.tolist()
     datalist = []
@@ -50,10 +50,10 @@ while True:
     for i in range(len(datalist)):
         for j in range(len(datalist[i])):
             datalist[i][j]=data[j][i]
-    print(datalist[3])
+    #print(datalist[3])
     predictiondata = algorithm.projections(datalist[3], p)
     #print(datalist)
-    print(predictiondata)
+    #print(predictiondata)
 
     i = 0
     k = 0
@@ -79,3 +79,4 @@ while True:
 
 exit()
 
+#The API iexfinance was used in this piece of code
