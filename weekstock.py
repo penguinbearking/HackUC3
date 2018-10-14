@@ -67,8 +67,8 @@ while True:
     for j in range(k):
         datalist[3].remove(-1)
 
-    concatlist = datalist + predictiondata
-    plt.plot(datalist[3])
+    concatlist = datalist[3] + predictiondata
+    plt.plot(concatlist)
 
     plt.title('Time Series Chart For ' + (stock))
     plt.show()

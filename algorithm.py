@@ -89,5 +89,5 @@ def projections(historicaldata, predictionlength):
   print(projections)
   print(bullProjections)
   print(bearProjections)
-  return bearProjections
+  return projections
 #print (bearProjections)
