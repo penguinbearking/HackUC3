@@ -1,6 +1,6 @@
 # Stock Predictions Based on Historical Data
 
-<em>This code was created for the HackUC III on October 13, 2018.</em>
+<em>This code was created for the <a href="hackuc.com">HackUC III</a> on October 13, 2018.</em>
 
 This project is a financial market projection that uses historical data to predict the value of stocks in the future over a certain period of time.
 
